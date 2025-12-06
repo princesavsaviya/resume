@@ -1,10 +1,342 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="scroll-smooth">
 <head>
-  <title>Prince Savsaviya – Resume</title>
-  <meta http-equiv="refresh" content="0; url=Prince_Savsaviya_Resume.pdf">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prince Savsaviya | HPC & ML Systems Engineer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#020617', /* Slate 950 */
+                        surface: '#0f172a',    /* Slate 900 */
+                        primary: '#22d3ee',    /* Cyan 400 */
+                        secondary: '#94a3b8',  /* Slate 400 */
+                        accent: '#10b981',     /* Emerald 500 */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    boxShadow: {
+                        'neon': '0 0 10px rgba(34, 211, 238, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #020617;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #22d3ee;
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 10px rgba(34, 211, 238, 0.4);
+        }
+    </style>
 </head>
-<body>
-  <p>If you are not redirected automatically, <a href="Prince_Savsaviya_Resume.pdf">click here to view the resume</a>.</p>
+<body class="bg-background text-slate-300 font-sans antialiased selection:bg-primary selection:text-black">
+
+    <nav class="fixed w-full z-50 bg-background/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-mono text-xl font-bold text-primary tracking-tighter">&lt;PS /&gt;</a>
+            <div class="space-x-6 hidden md:block font-mono text-sm">
+                <a href="#about" class="hover:text-primary transition-colors">01. About</a>
+                <a href="#experience" class="hover:text-primary transition-colors">02. Experience</a>
+                <a href="#projects" class="hover:text-primary transition-colors">03. Projects</a>
+                <a href="#simulations" class="hover:text-primary transition-colors">04. Simulation Gallery</a>
+                <a href="#contact" class="hover:text-primary transition-colors">05. Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <p class="font-mono text-primary mb-4 text-glow">Hello, world. I am</p>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
+                Prince Savsaviya.
+            </h1>
+            <h2 class="text-3xl md:text-5xl font-bold text-slate-500 mb-8">
+                HPC, Simulation, ML & Robotics Systems.
+            </h2>
+            <p class="max-w-2xl mx-auto text-secondary mb-10 leading-relaxed">
+                Merging high-performance computing with physical simulations and machine learning. 
+                I build scalable infrastructure for AI, GPU-accelerated solvers, and robust control systems.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="./Prince_Savsaviya_Resume.pdf" target="_blank" class="px-6 py-3 bg-surface text-white font-mono rounded border border-slate-600 hover:border-primary hover:text-primary transition-all flex items-center justify-center gap-2 group">
+                    <i class="fas fa-file-pdf group-hover:scale-110 transition-transform"></i> Resume
+                </a>
+                
+                <a href="./Prince_Savsaviya_CV.pdf" target="_blank" class="px-6 py-3 bg-transparent border border-primary text-primary font-mono rounded hover:bg-primary/10 transition-all hover:shadow-neon flex items-center justify-center gap-2">
+                    <i class="fas fa-file-alt"></i> Full CV
+                </a>
+
+                <a href="#contact" class="px-6 py-3 bg-surface text-white font-mono rounded border border-slate-600 hover:border-primary hover:text-primary transition-all flex items-center justify-center gap-2 group">
+                    <i class="fas fa-envelope group-hover:scale-110 transition-transform"></i> Contact
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-surface/30">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex items-center gap-4 mb-10">
+                <span class="font-mono text-primary text-xl">01.</span>
+                <h2 class="text-3xl font-bold text-white">About Me</h2>
+                <div class="h-px bg-slate-700 flex-grow max-w-xs"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="md:col-span-2 text-slate-400 leading-relaxed space-y-4">
+                    <p>
+                        I am an M.S. Computer Science candidate at <span class="text-white">UC Riverside</span>, specializing in the intersection of physics-based simulation and data-driven learning. My research focuses on using high-fidelity simulations as training grounds for adaptive controllers and robotic foundation models.
+                    </p>
+                    <p>
+                        From optimizing <span class="text-primary font-mono text-sm">CUDA</span> kernels for fluid dynamics to orchestrating <span class="text-primary font-mono text-sm">Kubernetes</span> clusters for ML inference, I enjoy solving full-stack systems engineering challenges.
+                    </p>
+                </div>
+                <div class="font-mono text-sm bg-surface p-6 rounded border border-slate-800">
+                    <h3 class="text-white mb-4 border-b border-slate-700 pb-2">Technical Arsenal</h3>
+                    <ul class="space-y-2 text-secondary">
+                        <li class="flex items-center gap-2"><i class="fas fa-caret-right text-primary"></i> C++ / CUDA / Python</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-caret-right text-primary"></i> PyTorch / TensorFlow</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-caret-right text-primary"></i> MPI / OpenMP / PETSC</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-caret-right text-primary"></i> K8s / Docker / AWS</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-caret-right text-primary"></i> ROS / Gazebo / PX4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex items-center gap-4 mb-12">
+                <span class="font-mono text-primary text-xl">02.</span>
+                <h2 class="text-3xl font-bold text-white">Experience</h2>
+                <div class="h-px bg-slate-700 flex-grow max-w-xs"></div>
+            </div>
+
+            <div class="relative border-l border-slate-700 ml-3 md:ml-6 space-y-12">
+                
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-primary shadow-neon"></div>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-4">
+                        <h3 class="text-xl font-bold text-white">Graduate Researcher</h3>
+                        <span class="font-mono text-xs text-slate-500">May 2025 - Present</span>
+                    </div>
+                    <p class="font-mono text-sm text-primary mb-2">University of California, Riverside</p>
+                    <ul class="list-disc ml-4 text-slate-400 text-sm space-y-2 max-w-2xl marker:text-primary">
+                        <li>Developed a modular ALE-ready simulation framework integrating CFD and FEM solvers, validated against Turek-Hron benchmarks.</li>
+                        <li>Optimized PETSC/CUDA kernels with GPU-aware MPI, reducing memory bottlenecks and doubling multi-GPU throughput.</li>
+                        <li>Prototyping physics-informed ML predictors (Hamiltonian NNs) to accelerate FSI coupling convergence.</li>
+                    </ul>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-slate-600"></div>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-4">
+                        <h3 class="text-xl font-bold text-white">Research Intern</h3>
+                        <span class="font-mono text-xs text-slate-500">May 2023 - Dec 2023</span>
+                    </div>
+                    <p class="font-mono text-sm text-primary mb-2">Adani University</p>
+                    <ul class="list-disc ml-4 text-slate-400 text-sm space-y-2 max-w-2xl marker:text-primary">
+                        <li>Engineered a physics-informed ML framework combining PDE aging models with ensemble regressors, cutting MSE by 98%.</li>
+                        <li>Automated feature engineering on 200k+ battery records using Optuna, reducing experiment turnaround by 30%.</li>
+                        <li>Published results in <em>Journal of Power Sources</em> (IF ~7.9).</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-surface/30">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center gap-4 mb-12">
+                <span class="font-mono text-primary text-xl">03.</span>
+                <h2 class="text-3xl font-bold text-white">Featured Projects</h2>
+                <div class="h-px bg-slate-700 flex-grow max-w-xs"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="group bg-background border border-slate-800 p-6 rounded hover:border-primary transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="fas fa-wind text-3xl text-slate-600 group-hover:text-primary transition-colors"></i>
+                        <a href="https://github.com/princesavsaviya" target="_blank" class="text-slate-400 hover:text-white"><i class="fab fa-github text-lg"></i></a>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">GPU-Aware FSI Benchmark</h3>
+                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                        Implemented an ALE-ready projection fluid solver and hyperelastic solid solver. Synchronized via mesh motion and optimized using GPU-aware MPI and PETSc/CUDA.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono text-primary mt-auto">
+                        <span class="bg-surface px-2 py-1 rounded">C++</span>
+                        <span class="bg-surface px-2 py-1 rounded">CUDA</span>
+                        <span class="bg-surface px-2 py-1 rounded">MPI</span>
+                    </div>
+                </div>
+
+                <div class="group bg-background border border-slate-800 p-6 rounded hover:border-primary transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="fas fa-search text-3xl text-slate-600 group-hover:text-primary transition-colors"></i>
+                        <a href="https://github.com/princesavsaviya" target="_blank" class="text-slate-400 hover:text-white"><i class="fab fa-github text-lg"></i></a>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">RetrieveX Search Engine</h3>
+                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                        Hybrid search engine merging BM25 with BERT+FAISS vectors. Served 150k docs via async REST API with P95 latency &lt;200ms.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono text-primary mt-auto">
+                        <span class="bg-surface px-2 py-1 rounded">Python</span>
+                        <span class="bg-surface px-2 py-1 rounded">Elasticsearch</span>
+                        <span class="bg-surface px-2 py-1 rounded">BERT</span>
+                    </div>
+                </div>
+
+                <div class="group bg-background border border-slate-800 p-6 rounded hover:border-primary transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="fas fa-network-wired text-3xl text-slate-600 group-hover:text-primary transition-colors"></i>
+                        <a href="https://github.com/princesavsaviya" target="_blank" class="text-slate-400 hover:text-white"><i class="fab fa-github text-lg"></i></a>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">Predictive K8s Autoscaler</h3>
+                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                        LSTM-driven custom controller forecasting load 5-min ahead. Reduced over-provisioning by 18% while maintaining 99.9% SLA.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono text-primary mt-auto">
+                        <span class="bg-surface px-2 py-1 rounded">Kubernetes</span>
+                        <span class="bg-surface px-2 py-1 rounded">PyTorch</span>
+                        <span class="bg-surface px-2 py-1 rounded">Helm</span>
+                    </div>
+                </div>
+
+                <div class="group bg-background border border-slate-800 p-6 rounded hover:border-primary transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="fas fa-helicopter text-3xl text-slate-600 group-hover:text-primary transition-colors"></i>
+                        <a href="https://github.com/princesavsaviya" target="_blank" class="text-slate-400 hover:text-white"><i class="fab fa-github text-lg"></i></a>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">Quadrotor PID Control</h3>
+                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                        Implemented cascaded PID for simulated quadrotor in Gazebo. Validated waypoint tracking and disturbance rejection with &lt;0.15m position error.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono text-primary mt-auto">
+                        <span class="bg-surface px-2 py-1 rounded">ROS 2</span>
+                        <span class="bg-surface px-2 py-1 rounded">Gazebo</span>
+                        <span class="bg-surface px-2 py-1 rounded">PX4</span>
+                    </div>
+                </div>
+
+                 <div class="group bg-background border border-slate-800 p-6 rounded hover:border-primary transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="fas fa-battery-half text-3xl text-slate-600 group-hover:text-primary transition-colors"></i>
+                        <a href="https://doi.org/10.1016/j.jpowsour.2024.235771" target="_blank" class="text-slate-400 hover:text-white flex items-center gap-2 group-hover:text-primary">
+                            <span class="text-xs font-mono">Paper/DOI</span> <i class="fas fa-external-link-alt text-lg"></i>
+                        </a>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">Physics-Informed Battery AI</h3>
+                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                        Combined PDE aging models with ensemble regressors (SVR, RF). Cut RMSE by 86% vs data-only baselines on 200k+ cycle records.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono text-primary mt-auto">
+                        <span class="bg-surface px-2 py-1 rounded">Python</span>
+                        <span class="bg-surface px-2 py-1 rounded">Optuna</span>
+                        <span class="bg-surface px-2 py-1 rounded">SciKit-Learn</span>
+                    </div>
+                </div>
+
+                <div class="group bg-background border border-slate-800 p-6 rounded hover:border-primary transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="fas fa-chart-line text-3xl text-slate-600 group-hover:text-primary transition-colors"></i>
+                        <a href="https://github.com/princesavsaviya" target="_blank" class="text-slate-400 hover:text-white"><i class="fab fa-github text-lg"></i></a>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">Risk Analytics Microservice</h3>
+                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                        Real-time analytics service ingesting multi-asset data (equities, bonds). Optimized vectorized backtests to ~85ms and deployed via CI/CD.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono text-primary mt-auto">
+                        <span class="bg-surface px-2 py-1 rounded">FastAPI</span>
+                        <span class="bg-surface px-2 py-1 rounded">Pandas</span>
+                        <span class="bg-surface px-2 py-1 rounded">Docker</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="simulations" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h3 class="text-2xl font-bold text-white mb-8 border-l-4 border-primary pl-4">Simulation Visuals</h3>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-surface border border-slate-800 rounded-lg overflow-hidden group">
+                    <div class="aspect-video bg-black flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10"></div>
+                        <p class="text-slate-500 font-mono text-sm z-0">
+                            [Insert GIF of Turek-Hron Fluid Flow]
+                        </p>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-white font-bold">FSI Turek-Hron Benchmark</h4>
+                        <p class="text-slate-400 text-sm mt-2">
+                            Visualizing the <span class="text-primary">ALE mesh motion</span>. The solid flag deforms under fluid pressure, validated to match reference lift/drag within 2-5%.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 text-center">
+        <div class="max-w-2xl mx-auto px-6">
+            <p class="font-mono text-primary mb-4 text-glow">05. What's Next?</p>
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Get In Touch</h2>
+            <p class="text-slate-400 mb-10 text-lg">
+                I'm currently open to opportunities in Systems Engineering, HPC, Simulation, Machine Learning Systems, and Robotics. 
+                Whether you have a question about my research or just want to say hi, my inbox is open.
+            </p>
+            
+            <a href="mailto:princesavsaviya2023.learning@gmail.com" class="inline-block px-10 py-4 bg-transparent border border-primary text-primary font-mono rounded hover:bg-primary hover:text-black transition-all font-bold text-lg">
+                Say Hello
+            </a>
+
+            <div class="mt-12 flex justify-center gap-8">
+                <a href="https://github.com/princesavsaviya" target="_blank" class="text-slate-400 hover:text-primary text-2xl transition-colors"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/prince-savsaviya" target="_blank" class="text-slate-400 hover:text-primary text-2xl transition-colors"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-surface border-t border-slate-800 text-center">
+        <p class="font-mono text-xs text-slate-500">
+            Designed & Built by Prince Savsaviya <br>
+            <span class="text-slate-600">v1.2 // Powered by Tailwind & Coffee</span>
+        </p>
+    </footer>
+
 </body>
 </html>
